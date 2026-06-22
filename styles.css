@@ -1,14 +1,16 @@
 :root {
-  --ink: #202124;
-  --muted: #62666d;
-  --paper: #f7f7f4;
-  --surface: #ffffff;
-  --line: #deded8;
-  --accent: #c94f3d;
-  --accent-strong: #9f3125;
-  --teal: #14766f;
-  --teal-soft: #e0f1ee;
-  --shadow: 0 24px 60px rgba(24, 27, 31, 0.14);
+  --ink: #f4f0e8;
+  --muted: #aaa49a;
+  --paper: #090a0d;
+  --surface: #12151b;
+  --surface-strong: #181c24;
+  --line: #2c313a;
+  --accent: #d48a45;
+  --accent-strong: #f0a85f;
+  --steel: #8aa0b6;
+  --steel-soft: rgba(138, 160, 182, 0.16);
+  --shadow: 0 26px 70px rgba(0, 0, 0, 0.46);
+  color-scheme: dark;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -42,28 +44,22 @@ a {
   gap: 24px;
   min-height: 72px;
   padding: 14px clamp(20px, 5vw, 72px);
-  background: rgba(247, 247, 244, 0.92);
-  border-bottom: 1px solid rgba(32, 33, 36, 0.08);
+  background: rgba(9, 10, 13, 0.88);
+  border-bottom: 1px solid rgba(244, 240, 232, 0.1);
   backdrop-filter: blur(18px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: 0;
-  white-space: nowrap;
+  width: 188px;
+  min-height: 44px;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--ink), var(--teal));
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .main-nav {
@@ -87,7 +83,7 @@ a {
 .main-nav a:focus-visible,
 .main-nav a.active {
   color: var(--ink);
-  background: #ffffff;
+  background: rgba(244, 240, 232, 0.1);
   outline: none;
 }
 
@@ -105,7 +101,10 @@ a {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(8, 10, 12, 0.72), rgba(8, 10, 12, 0.24) 52%, rgba(8, 10, 12, 0.08));
+  background:
+    linear-gradient(90deg, rgba(10, 11, 13, 0.46), rgba(10, 11, 13, 0.18) 46%, rgba(10, 11, 13, 0.04)),
+    linear-gradient(0deg, rgba(138, 19, 24, 0.22), transparent 42%),
+    linear-gradient(180deg, rgba(255, 247, 239, 0.08), transparent 34%);
 }
 
 .hero-slot {
@@ -114,21 +113,37 @@ a {
   z-index: -2;
   border-radius: 0;
   min-height: 100%;
-  background:
-    linear-gradient(135deg, rgba(20, 118, 111, 0.28), rgba(201, 79, 61, 0.18)),
-    repeating-linear-gradient(45deg, #35383c 0 16px, #2d3034 16px 32px);
-  color: rgba(255, 255, 255, 0.78);
+  background: #08090c;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.22) saturate(1.08) contrast(0.94);
+}
+
+.feature-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.08) saturate(1.04) contrast(0.98);
 }
 
 .hero-content {
   width: min(760px, calc(100% - 40px));
   padding: 0 0 clamp(42px, 8vw, 86px) clamp(20px, 5vw, 72px);
   color: #ffffff;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.46);
 }
 
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--teal);
+  color: var(--accent);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -137,7 +152,7 @@ a {
 
 .hero .eyebrow,
 .vehicle-hero .eyebrow {
-  color: #9fe6dd;
+  color: #f0a85f;
 }
 
 h1,
@@ -170,7 +185,7 @@ h3 {
 .hero-copy {
   max-width: 560px;
   margin-bottom: 28px;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.94);
   font-size: clamp(1rem, 2vw, 1.28rem);
 }
 
@@ -193,7 +208,7 @@ h3 {
 }
 
 .button.primary {
-  color: #ffffff;
+  color: #090a0d;
   background: var(--accent);
 }
 
@@ -252,7 +267,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: var(--surface-strong);
   box-shadow: var(--shadow);
 }
 
@@ -294,7 +309,7 @@ h3 {
   grid-template-columns: minmax(0, 0.86fr) minmax(300px, 1.14fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .feature-copy {
@@ -326,7 +341,7 @@ h3 {
 .reserve-form {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--surface-strong);
 }
 
 .feature-card {
@@ -344,13 +359,13 @@ h3 {
   gap: 12px;
   min-height: 220px;
   padding: 22px;
-  color: #6b6f76;
+  color: rgba(244, 240, 232, 0.68);
   text-align: center;
-  border: 1px dashed rgba(32, 33, 36, 0.32);
+  border: 1px dashed rgba(244, 240, 232, 0.28);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(20, 118, 111, 0.11), rgba(201, 79, 61, 0.08)),
-    repeating-linear-gradient(45deg, #f2f3f1 0 14px, #e9ebe8 14px 28px);
+    linear-gradient(135deg, rgba(212, 138, 69, 0.1), rgba(138, 160, 182, 0.09)),
+    repeating-linear-gradient(45deg, #171a20 0 14px, #11141a 14px 28px);
 }
 
 .image-slot span {
@@ -400,8 +415,8 @@ h3 {
   margin-bottom: 22px;
   padding: 4px 10px;
   border-radius: 999px;
-  color: var(--teal);
-  background: var(--teal-soft);
+  color: var(--accent-strong);
+  background: rgba(212, 138, 69, 0.14);
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -412,7 +427,7 @@ h3 {
   justify-content: space-between;
   gap: 24px;
   color: #ffffff;
-  background: #26282c;
+  background: #050609;
 }
 
 .cta-band h2 {
@@ -423,8 +438,9 @@ h3 {
 .vehicle-hero {
   min-height: calc(100svh - 72px);
   background:
-    radial-gradient(circle at top right, rgba(20, 118, 111, 0.16), transparent 34%),
-    #26282c;
+    radial-gradient(circle at top right, rgba(212, 138, 69, 0.18), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(138, 160, 182, 0.14), transparent 38%),
+    #08090c;
   color: #ffffff;
 }
 
@@ -438,11 +454,11 @@ h3 {
 
 .vehicle-slot {
   min-height: min(54vw, 560px);
-  color: rgba(255, 255, 255, 0.76);
-  border-color: rgba(255, 255, 255, 0.34);
-  background:
-    linear-gradient(135deg, rgba(201, 79, 61, 0.22), rgba(20, 118, 111, 0.26)),
-    repeating-linear-gradient(45deg, #34373b 0 16px, #2a2d31 16px 32px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: #08090c;
+  box-shadow: var(--shadow);
 }
 
 .spec-section,
@@ -473,7 +489,7 @@ h3 {
 }
 
 .package-section {
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .package-card {
@@ -516,14 +532,14 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
-  background: #ffffff;
+  background: #0d0f14;
   font: inherit;
 }
 
 .reserve-form input:focus,
 .reserve-form select:focus {
-  border-color: var(--teal);
-  outline: 3px solid rgba(20, 118, 111, 0.16);
+  border-color: var(--accent);
+  outline: 3px solid rgba(212, 138, 69, 0.18);
 }
 
 .site-footer {
@@ -532,7 +548,7 @@ h3 {
   gap: 20px;
   padding: 28px clamp(20px, 5vw, 72px);
   color: rgba(255, 255, 255, 0.72);
-  background: #1f2024;
+  background: #050609;
   font-size: 0.9rem;
 }
 
@@ -588,7 +604,7 @@ h3 {
   }
 
   .brand {
-    font-size: 0.96rem;
+    width: 170px;
   }
 
   .main-nav a {

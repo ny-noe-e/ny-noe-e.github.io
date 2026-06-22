@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="edge" x1="8" y1="4" x2="56" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7ef"/>
+      <stop offset="0.45" stop-color="#b9b2a8"/>
+      <stop offset="1" stop-color="#6f747a"/>
+    </linearGradient>
+    <linearGradient id="red" x1="15" y1="10" x2="49" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8202a"/>
+      <stop offset="0.48" stop-color="#9f111a"/>
+      <stop offset="1" stop-color="#6f0b12"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="10" fill="#08090c"/>
+  <path fill="url(#edge)" d="M32 4l22 7v19.7C54 46 46 56 32 62 18 56 10 46 10 30.7V11z"/>
+  <path fill="#08090c" d="M32 8.8l17.8 5.7V31c0 12.1-5.8 20.5-17.8 26.2C20 51.5 14.2 43.1 14.2 31V14.5z"/>
+  <path fill="url(#red)" d="M32 13.2l13.8 4.4V31c0 9.2-3.9 15.7-13.8 20.7C22.1 46.7 18.2 40.2 18.2 31V17.6z"/>
+  <path fill="#fff7ef" d="M28.2 20h7.6v27.8h-7.6z"/>
+  <path fill="#fff7ef" d="M21.5 30.1h21v7.6h-21z"/>
+  <path fill="none" stroke="#fff7ef" stroke-width="1.4" d="M32 16.4l10 3.2V31c0 7.2-2.9 12.3-10 16.2C24.9 43.3 22 38.2 22 31V19.6z"/>
+</svg>

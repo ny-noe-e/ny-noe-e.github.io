@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="86" viewBox="0 0 340 86" role="img" aria-labelledby="title desc">
+  <title id="title">EDELWERK logo</title>
+  <desc id="desc">Classic red and white Swiss shield logo for EDELWERK BMW tuning.</desc>
+  <defs>
+    <linearGradient id="crestEdge" x1="16" y1="6" x2="73" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7ef"/>
+      <stop offset="0.42" stop-color="#b9b2a8"/>
+      <stop offset="1" stop-color="#6f747a"/>
+    </linearGradient>
+    <linearGradient id="crestRed" x1="21" y1="12" x2="66" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8202a"/>
+      <stop offset="0.48" stop-color="#9f111a"/>
+      <stop offset="1" stop-color="#6f0b12"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="url(#crestEdge)" d="M44 4l29 9v25.5c0 20.7-10.5 34-29 43.5-18.5-9.5-29-22.8-29-43.5V13z"/>
+    <path fill="#08090c" d="M44 9.7l24 7.5v21.6c0 16.2-7.8 27.4-24 36-16.2-8.6-24-19.8-24-36V17.2z"/>
+    <path fill="url(#crestRed)" d="M44 14.2l19.4 6.1V39c0 12.4-5.8 21.5-19.4 29.4C30.4 60.5 24.6 51.4 24.6 39V20.3z"/>
+    <path fill="#fff7ef" d="M39.6 22h8.8v38h-8.8z"/>
+    <path fill="#fff7ef" d="M29.6 36.6h28.8v8.8H29.6z"/>
+    <path stroke="#fff7ef" stroke-width="1.5" d="M44 17.7l16 5V39c0 10.4-4.5 18-16 25-11.5-7-16-14.6-16-25V22.7z"/>
+    <path stroke="#d8202a" stroke-width="2" d="M88 23h230"/>
+    <text x="88" y="56" fill="#fff7ef" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" letter-spacing="4">EDELWERK</text>
+    <text x="91" y="72" fill="#c7c1b9" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.8">ZURICH BMW TUNING</text>
+    <path fill="#d8202a" d="M286 64h32l-4 6h-32z"/>
+  </g>
+</svg>
